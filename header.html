@@ -1,0 +1,33 @@
+ <script type="text/javascript">
+ 	$(document).ready(function() {
+	 $('ul.nav li a').each(function() {
+			var curNav = $(this).attr('href');
+			curNav = curNav.replace("http://www.mxmichigan.com", "");    
+			
+			if(curNav == window.location.pathname)
+			{
+				$(this).addClass('currentpage');	
+			}
+			else if((curNav == "") && (window.location.pathname == "/"))
+			{
+				$(this).addClass('currentpage');
+			}
+			else if((curNav == "") && (window.location.pathname == "/index.html"))
+			{
+				$(this).addClass('currentpage');
+			}
+	  });
+	});
+ </script>
+ <div class="header"> 
+  	<div class="innerheader">
+  		<img src="images/Mx-Michigan-Logo.png" alt="Mx Michigan" /> 
+        <ul class="nav">
+        	<li><a href="http://www.mxmichigan.com">Home</a></li> 
+            <li><a href="http://www.mxmichigan.com/calendar.html">Calendar</a></li>
+            <li><a href="http://www.mxmichigan.com/map.html">Map</a></li>
+            <li><a href="http://www.mxmichigan.com/discussion.html">Discussion</a></li>
+            <li><a href="http://www.mxmichigan.com/contact.html">Contact</a></li>
+        </ul>
+    </div>
+  </div>  <!-- end .header -->

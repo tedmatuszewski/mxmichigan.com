@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+        
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#frmRegistration").submit(function(e) { 
+                    if($("input[name='password2']").val() !== $("input[name='password1']").val())
+                    {
+                        showError(e, "Your passwords do not match."); 
+                    } 
+                });
+            });
+            function showError(e, error)
+            {
+                e.preventDefault();
+                $(".alert").removeClass('hidden').find('span').text(error);
+                return 0;
+            }
+        </script>
+    </head> 
+
+    <body> 
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="index.html">Back</a></li> 
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container"> 
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Registration</div>
+                        <div class="panel-body">
+                            <form id="frmRegistration" action="session/register.php" method="POST">
+                                <div class="alert alert-danger hidden">                                    
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  
+                                    <strong>Error! </strong><span></span>                             
+                                </div> 
+                                <label>Email:</label>
+                                <input name="email" type="text" class="form-control" placeholder="Email" required autofocus>
+                                <label>Password:</label>
+                                <input name="password1" type="password" class="form-control" placeholder="Password" required>
+                                <label>Reenter Your Password:</label>
+                                <input name="password2" type="password" class="form-control" placeholder="Reenter Password" required>
+                                <button type="submit" class="btn btn-success pull-right">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+
+            <hr>
+
+            <footer>
+                <p>&copy; Ted Matuszewski 2013</p>
+            </footer>
+        </div> <!-- /container --> 
+    </body>
+</html> 

@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mx Michigan</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<link href="css/mxmichigan.css" rel="stylesheet" type="text/css"> 
+<link rel='stylesheet' type='text/css' href='css/fullcalendar.css' />
+<link rel='stylesheet' type='text/css' href='css/fullcalendar.print.css' media='print' />
+
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type='text/javascript' src='js/jquery-ui-1.8.23.custom.min.js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<script type='text/javascript'>
+
+$(document).ready(function() { 
+	var directionsDisplay = new google.maps.DirectionsRenderer();
+	var center = new google.maps.LatLng(43.77, -84.63);
+	   
+	var mapOptions = {
+	  zoom: 8,
+	  mapTypeId: google.maps.MapTypeId.ROADMAP,
+	  center: center
+	}
+	var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+	//Redbud
+    var redbud = new google.maps.LatLng(41.873603, -86.370263);
+	var marker = new google.maps.Marker({
+      position: redbud,
+      map: map,
+      title:"Red Bud"
+  });
+  	//Dutch 42.369979,-85.957236
+    var Dutch = new google.maps.LatLng(42.369979,-85.957236);
+	var marker = new google.maps.Marker({
+      position: Dutch,
+      map: map,
+      title:"Dutch"
+  });
+    //Battle Creek 42.389091, -85.210918
+    var BattleCreek = new google.maps.LatLng(42.389091, -85.210918);
+	var marker = new google.maps.Marker({
+      position: BattleCreek,
+      map: map,
+      title:"Battle Creek"
+  });
+	//Portland 42.811729, -84.886171
+    var Portland = new google.maps.LatLng(42.811729, -84.886171);
+	var marker = new google.maps.Marker({
+      position: Portland,
+      map: map,
+      title:"Portland"
+  });
+	//Moreland's 43.278930, -84.970174
+    var Moreland = new google.maps.LatLng(43.278930, -84.970174);
+	var marker = new google.maps.Marker({
+      position: Moreland,
+      map: map,
+      title:"Moreland"
+  });
+	
+	//Big Air 43.427318, -85.832500
+    var BigAir = new google.maps.LatLng(43.427318, -85.832500);
+	var marker = new google.maps.Marker({
+      position: BigAir,
+      map: map,
+      title:"Big Air"
+  });
+	//Polka Dots 43.538557, -84.398581
+    var polkaDots = new google.maps.LatLng(41.873603, -86.370263);
+	var marker = new google.maps.Marker({
+      position: polkaDots,
+      map: map,
+      title:"Polka Dots"
+  });
+	//Baja 43.251395, -83.648450
+    var Baja = new google.maps.LatLng(43.251395, -83.648450);
+	var marker = new google.maps.Marker({
+      position: Baja,
+      map: map,
+      title:"Baja"
+  });
+	//Bulldogs 43.263461, -83.602107
+    var Bulldogs = new google.maps.LatLng(43.263461, -83.602107);
+	var marker = new google.maps.Marker({
+      position: Bulldogs,
+      map: map,
+      title:"Bulldogs"
+  });
+	//Freelin 43.212249, -82.989660
+    var Freelin = new google.maps.LatLng(43.212249, -82.989660);
+	var marker = new google.maps.Marker({
+      position: Freelin,
+      map: map,
+      title:"Freelin"
+  });
+	//Grattan 43.097520, -85.384262  
+    var Grattan = new google.maps.LatLng(43.097520, -85.384262);
+	var marker = new google.maps.Marker({
+      position: Grattan,
+      map: map,
+      title:"Grattan"
+  });
+	//MPX Racing 43.742339, -83.434814
+    var MPX = new google.maps.LatLng(43.742339, -83.434814);
+	var marker = new google.maps.Marker({
+      position: MPX,
+      map: map,
+      title:"MPX"
+  });
+	//Sandbox MX 43.406482, -83.541670
+    var Sandbox = new google.maps.LatLng(43.406482, -83.541670);
+	var marker = new google.maps.Marker({
+      position: Sandbox,
+      map: map,
+      title:"Sandbox MX"
+  });
+	//CMC 44.229874, -85.436584
+    var CMC = new google.maps.LatLng(44.229874, -85.436584);
+	var marker = new google.maps.Marker({
+      position: CMC,
+      map: map,
+      title:"CMC"
+  });
+	//TMCMX 46.354998, -85.509559
+    var TMCMX = new google.maps.LatLng(46.354998, -85.509559);
+	var marker = new google.maps.Marker({
+      position: TMCMX,
+      map: map,
+      title:"TMCMX"
+  });
+	//OSTC 44.392750, -84.186928
+    var OSTC = new google.maps.LatLng(44.392750, -84.186928);
+	var marker = new google.maps.Marker({
+      position: OSTC,
+      map: map,
+      title:"OSTC"
+  });
+	
+}); 
+</script>  
+</head>
+
+<body>
+<div class="center-wrapper"> 
+    <!--#include file="header.html" -->
+	<div class="center-content">  
+    	<div class="center-ad"> 
+			<script type="text/javascript"><!--
+                google_ad_client = "ca-pub-1641621719114473";
+                /* Calendar Page */
+                google_ad_slot = "1284529391";
+                google_ad_width = 970;
+                google_ad_height = 90;
+                //-->
+                </script>
+                <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div><!-- end center-ad-->
+        <div class="full-content">
+        	<div id="map_canvas"></div>
+  		</div>  <!-- end .full-content -->  
+    </div><!-- end center-content-->
+	<!--#include file="footer.html" -->
+</div>  <!-- end .center-wrapper -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* CSS Document */
+.space-top {
+	margin-top:10px;
+}
+.space-bottom { 
+	margin-bottom:10px;
+}
+.space-left {
+	margin-left: 10px;		
+}
+.space-right {
+	margin-right:10px;	
+}
+.logo {
+	width: 100%;	
+}
+.scrollable {
+	max-height: 300px;
+	overflow: auto;
+	display: inline-block;
+	width: 100%;
+}

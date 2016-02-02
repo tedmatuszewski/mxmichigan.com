@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mx Michigan</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<link href="css/mxmichigan.css" rel="stylesheet" type="text/css"> 
+<link rel='stylesheet' type='text/css' href='css/fullcalendar.css' />
+<link rel='stylesheet' type='text/css' href='css/fullcalendar.print.css' media='print' />
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type='text/javascript' src='js/jquery-ui-1.8.23.custom.min.js'></script>
+<script type='text/javascript' src='js/fullcalendar.min.js'></script>
+<script type='text/javascript' src='js/trackarrays.js'></script>
+<script type='text/javascript'>
+//hihihiiihihihihi
+$(document).ready(function() {
+
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			editable: false
+		});
+		//Baja Practice
+		doCheckBox('#baja', 'Baja Practice', bajaPracticeArray, 
+			 'http://www.bajamx.com/');
+			
+		doCheckBox('#baja', 'Baja Race', bajaRaceArray, 
+			 'http://www.bajamx.com/');	
+			
+		doCheckBox('#redbud', 'Red Bud Practice', redbudPracticeArray,
+			  'http://www.redbudmx.com/openriding.htm');	
+		
+		//Dutch	 
+		doCheckBox('#dutch', 'Dutch Practice', dutchPracticeArray,
+			 'http://www.dutchsportparkmx.com/schedule.html');
+		
+		doCheckBox('#dutch', 'Dutch Race', dutchRaceArray, 
+			 'http://www.dutchsportparkmx.com/schedule.html');
+			
+		//Battle Creek
+		doCheckBox('#battlecreek', 'Battle Creek Practice', battlecreekPracticeArray,
+			 'http://www.battlecreekmotorcycleclub.com/2013-event-schedule.html');
+			
+		doCheckBox('#battlecreek', 'Battle Creek Hare Scramble', battlecreekHareScrambleArray,
+			 'http://www.battlecreekmotorcycleclub.com/2013-event-schedule.html');
+		
+		doCheckBox('#battlecreek', 'Battle Creek Race',  battlecreekRaceArray,
+			 'http://www.battlecreekmotorcycleclub.com/2013-event-schedule.html');
+		
+		//Portland	
+		doCheckBox('#portland', 'Portland Race', portlandRaceArray,
+			 'http://portlandtrailriders.com/index.php?option=com_content&task=view&id=46&Itemid=78');
+			
+		doCheckBox('#portland', 'Portland Practice', portlandPracticeArray, 
+			 'http://portlandtrailriders.com/index.php?option=com_content&task=view&id=46&Itemid=78');
+			
+		doCheckBox('#portland', 'Portland Hare Scramble', portlandHarescrambleArray,
+			 'http://portlandtrailriders.com/index.php?option=com_content&task=view&id=46&Itemid=78'); 
+		
+		//Big Air 
+		doCheckBox('#bigair', 'Big Air Practice', bigAirWednesdayPracticeArray, 
+			 'http://bigairmotocross.com/wordpress/practice-info/');
+			 
+		doCheckBox('#bigair', 'Big Air Practice', bigAirSaturdayPracticeArray,
+		     'http://bigairmotocross.com/wordpress/practice-info/');
+			 
+		doCheckBox('#bigair', 'Big Air Race', bigairRaceArray,
+			 'http://bigairmotocross.com/wordpress/category/race-updates'); 
+			
+		//Polka Dots
+		doCheckBox('#polkadots', 'Polka Dots Race', polkadotsRaceArray,  
+			 'http://polkadotsmc.net/pdmc-2013-schedule/');
+		
+		doCheckBox('#polkadots', 'Polka Dots Practice', polkadotsPracticeArray,
+			 'http://polkadotsmc.net/pdmc-2013-schedule/');
+		
+		doCheckBox('#polkadots', 'Polka Dots Hare Scramble', polkadotsHarescrambleArray,
+			 'http://polkadotsmc.net/pdmc-2013-schedule/'); 
+			 
+		//Bulldogs
+		doCheckBox('#bulldogs', 'Bulldog MC Race', bulldogsRaceArray, 
+			'http://www.bulldogmx.com/');	
+		
+		//Freelin	
+		doCheckBox('#freelin', 'Freelin Race', freelinRaceArray, 
+			'http://www.freelinmx.com/race%20calendar.htm');
+			
+		doCheckBox('#freelin', 'Freelin Practice', freelinPracticeArray, 
+			'http://www.freelinmx.com/race%20calendar.htm');	 
+		
+		//Grattan	
+		doCheckBox('#grattan', 'Grattan Race', grattanRaceArray,
+			'http://speedway.site.aplus.net/wordpress/2013-race-dates/');
+			
+		doCheckBox('#grattan', 'Grattan Practice', grattanPracticeArray,
+			'http://speedway.site.aplus.net/wordpress/2013-race-dates/');
+		
+		//MPX	
+		doCheckBox('#mpx', 'MPX Race', mpxRaceArray,
+			'http://mpxracing.com/index.php?option=com_content&view=article&id=3&Itemid=124');
+		
+		doCheckBox('#mpx', 'MPX Practice', mpxPracticeArray,
+			'http://mpxracing.com/index.php?option=com_content&view=article&id=3&Itemid=124');
+		
+		//Sandbox	
+		doCheckBox('#sandbox', 'Sanbox Practice', sandboxPracticeArray,
+			'http://www.sandboxmx.com/page/page/3186922.htm');
+			
+		//CMC	
+		doCheckBox('#cmc', 'CMC Race', cmcRaceArray,
+			'http://www.cadillacmc.com/');
+		
+		//TMCMC
+		doCheckBox('#tmc', 'CMC Practice', tmcMondayPracticeArray,
+			'http://www.cadillacmc.com/');
+		doCheckBox('#tmc', 'CMC Practice', tmcWednesdayPracticeArray,
+			'http://www.cadillacmc.com/');
+		doCheckBox('#tmc', 'CMC Practice', tmcThursdayPracticeArray,
+			'http://www.cadillacmc.com/');
+		doCheckBox('#tmc', 'CMC Practice', tmcFridayPracticeArray,
+			'http://www.cadillacmc.com/');
+		doCheckBox('#tmc', 'CMC Practice', tmcSaturdayPracticeArray,
+			'http://www.cadillacmc.com/'); 
+		doCheckBox('#tmc', 'CMC Practice', tmcSundayPracticeArray,
+			'http://www.cadillacmc.com/');
+		
+		doCheckBox('#tmc', 'TMC Race', tmcRaceArray,
+			'http://www.tmcmx.com/');
+	}); 
+</script>  
+</head>
+
+<body>
+<div class="center-wrapper">
+	<!--#include file="header.html" --> 
+	<div class="center-content"> 
+    	<div class="center-ad"> 
+			<script type="text/javascript"><!--
+                google_ad_client = "ca-pub-1641621719114473";
+                /* Calendar Page */
+                google_ad_slot = "1284529391";
+                google_ad_width = 970;
+                google_ad_height = 90;
+                //-->
+                </script>
+                <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div><!-- end center-ad-->
+        <div class="full-content">
+    		<p>NOTE*** Moreland's MX has open practice every day from 10:00am until Dark</p>
+   			<div class="calendarCheckBoxes"> 
+      			<p>Races/Practices:<br />
+                    <label class="labeltracks">Red Bud</label>
+                      <input class="inputtracks" type="checkbox" id="redbud" />
+                      
+                    <label class="labeltracks">Dutch</label>
+                      <input class="inputtracks" type="checkbox" id="dutch" />
+                      
+                    <label class="labeltracks">Battle Creek</label>
+                      <input class="inputtracks" type="checkbox" id="battlecreek" />
+                      
+                    <label class="labeltracks">Portland</label>
+                      <input class="inputtracks" type="checkbox" id="portland" />
+                      
+                    <label class="labeltracks">Moreland's</label>
+                      <input class="inputtracks" type="checkbox" id="morlands" />
+                      
+                    <label class="labeltracks">Big Air</label>
+                      <input class="inputtracks" type="checkbox" id="bigair" />
+                      <br />
+                    <label class="labeltracks">Polka Dots</label>
+                      <input class="inputtracks" type="checkbox" id="polkadots" />
+                      
+                    <label class="labeltracks">Baja</label>
+                      <input class="inputtracks" type="checkbox" id="baja" />
+                      
+                    <label class="labeltracks">Bulldogs</label>
+                      <input class="inputtracks" type="checkbox" id="bulldogs" />
+                      
+                    <label class="labeltracks">Freelin</label>
+                      <input class="inputtracks" type="checkbox" id="freelin" />
+                     
+                    <label class="labeltracks">Grattan</label>
+                      <input class="inputtracks" type="checkbox" id="grattan" />
+                       
+                       <br />
+                    <label class="labeltracks">MPX Racing</label>
+                      <input class="inputtracks" type="checkbox" id="mpx" />
+                      
+                    <label class="labeltracks">Sandbox MX</label>
+                      <input class="inputtracks" type="checkbox" id="sandbox" /> 
+                     
+                    <label class="labeltracks">CMC</label>
+                      <input class="inputtracks" type="checkbox" id="cmc" />
+                      
+                    <label class="labeltracks">TMCMX</label>
+                      <input class="inputtracks" type="checkbox" id="tmc" /> 
+                </p> 
+            </div>
+            <div class="clearfloat"></div>
+            <div id='calendar'></div>
+		</div>  <!-- end .full-content -->  
+
+	</div>  <!-- end .center-content -->
+
+  <!--#include file="footer.html" -->
+</div>
+</body>
+</html>
